@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align: center; margin-bottom: 50px; margin-top: 30px">Assignment 3: Dynamic Operations Using Js On Arrays</h2>
+
+    <div class="container">
+
+        <div class="secone">
+            <hr>
+            <h4 class="seconetitle">Integer Array Search And Sort Ops</h4>
+            <label for="integerArray">Enter integers separated by comma: </label>
+            <input type="text" id="integerArray" class="form-control mb-2">
+            <hr>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center">
+                <button class="buttonSort" onclick="performIntegerSorting()">Sort Array</button>
+                <button class="buttonSearch" onclick="performIntegerSearching()">Search Value</button>
+                <button class="clearButton" onclick="clearIntArray()">Clear Section</button>
+            </div>
+            <hr>
+            <div id="integerResult" class="seconeres"></div>
+        </div>
+
+        <div style="border-left:1px solid #000;height:250px"></div>
+
+        <div class="sectwo">
+            <hr>
+            <h4 class="sectwotitle">Named Entity (String) Array Search</h4>
+            <label for="entityArray">Enter named entities separated by comma: </label>
+            <input type="text" id="entityArray" class="form-control mb-2">
+            <hr>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center">
+                <button class="buttonSearch" onclick="performEntitySearching()">Search Entity</button>
+                <button class="clearButton" onclick="clearStrArray()">Clear Section</button>
+            </div>
+            <hr>
+            <div id="entityResult" class="sectwores"></div>
+        </div>
+    </div>
+
+    <script>
+        function performIntegerSorting() {
+            const inputArray = document.getElementById('integerArray').value.split(',').map(Number);
+
+            for (let i = 0; i < inputArray.length - 1; i++) {
+                for (let j = 0; j < inputArray.length - i - 1; j++) {
+                    if (inputArray[j] > inputArray[j + 1]) {
+                        const temp = inputArray[j];
+                        inputArray[j] = inputArray[j + 1];
+                        inputArray[j + 1] = temp;
+                    }
+                }
+            }
+
+            document.getElementById('integerResult').innerHTML = `
+        <p>Sorted Array: [${inputArray.join(', ')}]</p>
+    `;
+        }
+
+        function performIntegerSearching() {
+            const inputArray = document.getElementById('integerArray').value.split(',').map(Number);
+
+            const searchValue = parseInt(prompt("Enter the integer to search:"));
+            const foundIndex = inputArray.indexOf(searchValue);
+
+            document.getElementById('integerResult').innerHTML = `
+            <p>Index of ${searchValue}: ${foundIndex !== -1 ? foundIndex : 'Not found'}</p>
+        `;
+        }
+
+        function performEntitySearching() {
+            const inputArray = document.getElementById('entityArray').value.split(',');
+
+            const searchEntity = prompt("Enter the entity to search:");
+            const foundIndex = inputArray.indexOf(searchEntity);
+
+            document.getElementById('entityResult').innerHTML = `
+            <p>Index of ${searchEntity}: ${foundIndex !== -1 ? foundIndex : 'Not found'}</p>
+        `;
+        }
+
+        function clearIntArray(){
+            document.getElementById('integerArray').value = '';
+            document.getElementById('integerResult').innerHTML = '';
+        }
+
+        function clearStrArray(){
+            document.getElementById('entityArray').value = '';
+            document.getElementById('entityResult').innerHTML = '';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>My CV</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 250vh;
+      }
+
+      .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 20px;
+        border: 1px solid #000;
+        padding: 20px;
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+        height: fit-content;
+      }
+
+      .hyperlinks {
+        margin-top: 20px;
+      }
+
+      .hyperlinks a {
+        margin: 0 10px;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .edu {
+        margin-top: 20px;
+      }
+
+      .sectitle {
+        text-align: left;
+      }
+
+      .left-side,
+      .left-side-sub,
+      .right-side {
+        text-align: left;
+      }
+
+      .left-side-sub {
+        color: grey;
+        font-style: italic;
+      }
+
+      .edu {
+        padding: 20px;
+      }
+
+      @media (max-width: 576px) {
+        .video-container {
+          height: 500vh;
+        }
+
+        .content {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="myvid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="container">
+        <div class="content">
+          <h1>First Middle Last</h1>
+          <div class="hyperlinks">
+            <a href="#" class="hyperlink">+91 123456789 |</a>
+            <a href="https://www.gmail.com/samplemail/" class="hyperlink"
+              >Mail |</a
+            >
+            <a
+              href="https://www.linkedin.com/in/sampleuser/"
+              class="hyperlink"
+              >LinkedIn |</a
+            >
+            <a href="https://github.com/nexa" class="hyperlink"
+              >GitHub</a
+            >
+          </div>
+
+          <hr />
+
+          <div class="edu">
+            <h3 class="sectitle">Education</h3>
+            <div class="row">
+              <div class="left-side col-12 col-md-8">
+                Vishwakarma Institute of Technology, Pune
+              </div>
+              <div class="left-side-sub col-12 col-md-8">
+                B. Tech in Computer Engineering
+              </div>
+              <div class="left-side-sub col-12 col-md-8">CGPA: 9.99</div>
+              <div class="right-side col-12 col-md-4">Pune (2022-2025)</div>
+            </div>
+            <div class="row" style="margin-top: 20px">
+              <div class="left-side col-12 col-md-8">
+                My Prev college
+              </div>
+              <div class="left-side-sub col-12 col-md-8">
+                Diploma in Computer Engineering
+              </div>
+              <div class="left-side-sub col-12 col-md-8">Score: 94.66</div>
+              <div class="right-side col-12 col-md-4">Pune (2019-2022)</div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="edu">
+            <h3 class="sectitle">Technical Skills</h3>
+            <div
+              style="display: flex; flex-direction: column; margin-top: 10px"
+            >
+              <p style="text-align: left">Java</p>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 80%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  80%
+                </div>
+              </div>
+            </div>
+            <div
+              style="display: flex; flex-direction: column; margin-top: 10px"
+            >
+              <p style="text-align: left">Python</p>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 60%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  60%
+                </div>
+              </div>
+            </div>
+            <div
+              style="display: flex; flex-direction: column; margin-top: 10px"
+            >
+              <p style="text-align: left">Javascript</p>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 90%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  90%
+                </div>
+              </div>
+            </div>
+            <div
+              style="display: flex; flex-direction: column; margin-top: 10px"
+            >
+              <p style="text-align: left">PHP</p>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 45%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  45%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="edu">
+            <h3 class="sectitle">Work Experience</h3>
+            <div class="card text-center" style="margin-top: 20px">
+              <div class="card-header">DEVELOPMENT INTERN</div>
+              <div class="card-body">
+                <h5 class="card-title">UIPro</h5>
+                <p class="card-text">
+                  Worked on 3 different mobile applications (frontend/backend).
+                  One of which is hosted on the Play Store.
+                </p>
+                <a href="#" class="btn btn-primary">GitHub</a>
+              </div>
+              <div class="card-footer text-muted">Nov. 2022 - Dec. 20222</div>
+            </div>
+            <div class="card text-center" style="margin-top: 20px">
+              <div class="card-header">FREELANCE</div>
+              <div class="card-body">
+                <h5 class="card-title">Ecommerce Freelance</h5>
+                <p class="card-text">
+                  Freelanced an e-commerce website for a product-based general
+                  store.
+                </p>
+                <a href="#" class="btn btn-primary">GitHub</a>
+              </div>
+              <div class="card-footer text-muted">June. 2022</div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="edu">
+            <h3 class="sectitle">Projects</h3>
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="card" style="width: 15rem; margin-top: 20px">
+                  <img
+                    src="https://miro.medium.com/v2/resize:fit:800/0*fPm_XtN6o-H_rYlo.jpeg"
+                    style="height: 200px"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Classifusion</h5>
+                    <p class="card-text">
+                      Machine Learning Based Classification Improving Algorithm
+                      Techniques For Classification.
+                    </p>
+                    <a href="#" class="btn btn-primary">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card" style="width: 15rem; margin-top: 20px">
+                  <img
+                    src="https://clickup.com/blog/wp-content/uploads/2021/09/healthcare-project-management-1.png"
+                    style="height: 200px"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Swasthyhith</h5>
+                    <p class="card-text">
+                      Full stack web platform to ease the process of medical
+                      conditions in INDIA.
+                    </p>
+                    <a href="#" class="btn btn-primary">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card" style="width: 15rem; margin-top: 20px">
+                  <img
+                    src="https://media.licdn.com/dms/image/D4D12AQH5aHL4QIBg-Q/article-cover_image-shrink_720_1280/0/1679476445597?e=2147483647&v=beta&t=DgNdH1qj-WCsQcTJktylB4s5PB-eR_e0IQ6cZbXm6pI"
+                    style="height: 200px"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Book4U</h5>
+                    <p class="card-text">
+                      A mobile application to get more done, and spend less time
+                      in finding the relevant notes.
+                    </p>
+                    <a href="#" class="btn btn-primary">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
